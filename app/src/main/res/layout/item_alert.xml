@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        app:cardCornerRadius="@dimen/radius"
+        app:cardElevation="@dimen/card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/typeIV"
+                style="@style/NavIcons"
+                android:src="@drawable/ic_round_check_box" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/messageTV"
+                    style="@style/AppListText"
+                    android:layout_marginStart="@dimen/mini"
+                    android:layout_marginTop="@dimen/mini"
+                    android:layout_marginEnd="@dimen/mini"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="right"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/title"
+                    android:textStyle="normal"
+                    tools:ignore="RtlHardcoded,SpUsage" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/dateTV"
+                    style="@style/AppListText"
+                    android:layout_marginStart="@dimen/mini"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="@dimen/mini"
+                    android:layout_marginBottom="@dimen/mini"
+                    android:gravity="right"
+                    android:text="@string/app_name"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/main"
+                    android:textStyle="normal"
+                    tools:ignore="RtlHardcoded,SpUsage" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/removeIV"
+                style="@style/NavIcons"
+                android:src="@drawable/ic_round_remove" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

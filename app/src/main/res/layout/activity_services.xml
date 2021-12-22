@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ServicesActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/widget_margin"
+        app:cardCornerRadius="@dimen/radius"
+        app:cardElevation="@dimen/card">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/mini"
+                android:paddingEnd="@dimen/mini">
+
+                <ImageView
+                    android:id="@+id/backIV"
+                    style="@style/NavIcons"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_round_arrow_back"
+                    app:tint="@color/colorPrimary"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/AppHeadText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/services" />
+
+                <ImageView
+                    android:id="@+id/addIV"
+                    style="@style/NavIcons"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_round_add"
+                    app:tint="@color/colorPrimary"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/servicesRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/noTV"
+                    style="@style/AppText"
+                    android:layout_centerInParent="true"
+                    android:text="@string/no_services_yet" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

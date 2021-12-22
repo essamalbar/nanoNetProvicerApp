@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".AddServiceActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rootCV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/widget_margin"
+        app:cardCornerRadius="@dimen/radius"
+        app:cardElevation="@dimen/card">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/AppHeadText"
+                android:text="@string/add_service" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/main"
+                        app:cardCornerRadius="@dimen/radius"
+                        app:cardElevation="@dimen/card">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/hero_title_height"
+                                android:layout_height="@dimen/hero_title_height">
+
+                                <ImageView
+                                    android:id="@+id/serviceIV"
+                                    android:layout_width="@dimen/hero_title_height"
+                                    android:layout_height="@dimen/hero_title_height"
+                                    android:scaleType="centerCrop"
+                                    tools:ignore="ContentDescription" />
+
+                                <ImageView
+                                    android:id="@+id/service2IV"
+                                    android:layout_width="@dimen/icon_xy"
+                                    android:layout_height="@dimen/icon_xy"
+                                    android:layout_centerInParent="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_round_add_photo_alternate"
+                                    tools:ignore="ContentDescription" />
+
+                            </RelativeLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/AppText"
+                                android:layout_marginTop="@dimen/mini"
+                                android:layout_marginBottom="@dimen/mini"
+                                android:text="اختر صورة"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        style="@style/AppText"
+                        android:layout_marginStart="@dimen/main"
+                        android:layout_marginBottom="@dimen/mini"
+                        android:gravity="start"
+                        android:text="أدخل التسمية لهذه الخدمة" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/nameTIL"
+                        style="@style/AppTextInputLayoutBase"
+                        android:layout_marginTop="0dp"
+                        app:counterEnabled="false"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/AppEditTextBase"
+                            android:hint="@string/_name"
+                            android:inputType="textPersonName" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/AppText"
+                        android:layout_marginStart="@dimen/main"
+                        android:layout_marginBottom="@dimen/mini"
+                        android:gravity="start"
+                        android:text="أدخل عنوان URL لهذه الخدمة" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/urlTIL"
+                        app:counterEnabled="false"
+                        style="@style/AppTextInputLayoutBase"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/AppEditTextBase"
+                            android:hint="@string/_url"
+                            android:inputType="textPersonName" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/addBTN"
+                        style="@style/AppMainButton"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="end"
+                        android:text="@string/add" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

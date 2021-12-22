@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".AddCustomerActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rootCV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/widget_margin"
+        app:cardCornerRadius="@dimen/radius"
+        app:cardElevation="@dimen/card">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/AppHeadText"
+                android:text="@string/customer" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/nameTIL"
+                        style="@style/AppTextInputLayoutBase"
+                        app:endIconMode="clear_text"
+                        app:startIconDrawable="@drawable/ic_round_person">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/AppEditTextBase"
+                            android:hint="@string/name"
+                            android:inputType="textPersonName" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/userTIL"
+                        style="@style/AppTextInputLayoutBase"
+                        app:endIconMode="clear_text"
+                        app:startIconDrawable="@drawable/ic_baseline_bubble_chart">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/AppEditTextBase"
+                            android:hint="@string/user"
+                            android:inputType="textPersonName" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/costTIL"
+                            style="@style/AppTextInputLayoutBase"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            app:prefixText="000,"
+                            app:startIconDrawable="@drawable/ic_round_attach_money">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/AppEditTextBase"
+                                android:hint="@string/cost"
+                                android:gravity="top"
+                                android:inputType="numberSigned" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <CheckBox
+                            android:id="@+id/getCB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/main"
+                            android:text="@string/get"
+                            android:textSize="@dimen/list_text"
+                            tools:ignore="SpUsage" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/amountTIL"
+                        style="@style/AppTextInputLayoutBase"
+                        app:endIconMode="clear_text"
+                        app:prefixText="000,"
+                        app:startIconDrawable="@drawable/ic_round_monetization_on">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/AppEditTextBase"
+                            android:hint="@string/amount"
+                            android:inputType="numberSigned" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/mobileTIL"
+                        style="@style/AppTextInputLayoutBase"
+                        app:endIconMode="clear_text"
+                        app:startIconDrawable="@drawable/ic_round_local_phone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/AppEditTextBase"
+                            android:hint="@string/mobile"
+                            android:inputType="phone" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/dateTIL"
+                        style="@style/AppTextInputLayoutBase"
+                        app:startIconDrawable="@drawable/ic_round_today">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/AppEditTextBase"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="@string/start_date"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/nanoUrlTIL"
+                        style="@style/AppTextInputLayoutBase"
+                        app:endIconDrawable="@drawable/ic_round_arrow_drop_down"
+                        app:endIconMode="custom"
+                        app:startIconDrawable="@drawable/ic_round_link">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/AppEditTextBase"
+                            android:hint="@string/nano_url"
+                            android:inputType="textUri" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/nanoLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/nanoUsernameTIL"
+                            style="@style/AppTextInputLayoutBase"
+                            android:layout_width="0dp"
+                            android:layout_marginEnd="@dimen/mini"
+                            android:layout_weight="1"
+                            app:endIconMode="clear_text">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/AppEditTextBase"
+                                android:hint="@string/nano_username"
+                                android:inputType="textEmailAddress" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/nanoPasswordTIL"
+                            style="@style/AppTextInputLayoutBase"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="@dimen/mini"
+                            android:layout_weight="1"
+                            app:endIconMode="password_toggle">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/AppEditTextBase"
+                                android:hint="@string/nano_password"
+                                android:inputType="textPassword" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/saveBTN"
+                        style="@style/AppMainButton"
+                        android:text="@string/save" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

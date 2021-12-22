@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".SettingsActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/widget_margin"
+        app:cardCornerRadius="@dimen/radius"
+        app:cardElevation="@dimen/card">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/mini"
+                android:paddingEnd="@dimen/mini">
+
+                <ImageView
+                    android:id="@+id/backIV"
+                    style="@style/NavIcons"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_round_arrow_back"
+                    app:tint="@color/colorPrimary"
+                    tools:ignore="ContentDescription,UnusedAttribute" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/AppHeadText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/action_settings" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/AppListText"
+                    android:text="مدة الاشتراك" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main"
+                    android:layout_marginEnd="@dimen/main"
+                    app:cardCornerRadius="@dimen/radius"
+                    app:cardElevation="@dimen/card">
+
+                    <RadioGroup
+                        android:id="@+id/durationRG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/main"
+                        android:layout_marginEnd="@dimen/main"
+                        android:checkedButton="@id/monthRB"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/monthRB"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/action_height"
+                            android:drawableEnd="@drawable/month_icon"
+                            android:drawablePadding="@dimen/main"
+                            android:paddingStart="@dimen/main"
+                            android:paddingEnd="@dimen/main"
+                            android:text="حسب مدة الشهر"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/list_text"
+                            app:buttonTint="@color/colorPrimary"
+                            tools:ignore="SpUsage" />
+
+                        <RelativeLayout style="@style/NavDividers" />
+
+                        <RadioButton
+                            android:id="@+id/month30RB"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/action_height"
+                            android:drawableEnd="@drawable/month_30_icon"
+                            android:drawablePadding="@dimen/main"
+                            android:paddingStart="@dimen/main"
+                            android:paddingEnd="@dimen/main"
+                            android:text="30 يوم ثابتة"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/list_text"
+                            app:buttonTint="@color/colorPrimary"
+                            tools:ignore="SpUsage" />
+
+                    </RadioGroup>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    style="@style/AppListText"
+                    android:text="وقت الاشتراك" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/main"
+                    android:layout_marginEnd="@dimen/main"
+                    app:cardCornerRadius="@dimen/radius"
+                    app:cardElevation="@dimen/card">
+
+                    <RadioGroup
+                        android:id="@+id/dateTimeRG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/main"
+                        android:layout_marginEnd="@dimen/main"
+                        android:checkedButton="@id/dateTimeRB"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/dateTimeRB"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/action_height"
+                            android:drawableEnd="@drawable/date_time_icon"
+                            android:drawablePadding="@dimen/main"
+                            android:paddingStart="@dimen/main"
+                            android:paddingEnd="@dimen/main"
+                            android:text="تاريخ مع الوقت"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/list_text"
+                            app:buttonTint="@color/colorPrimary"
+                            tools:ignore="SpUsage" />
+
+                        <RelativeLayout style="@style/NavDividers" />
+
+                        <RadioButton
+                            android:id="@+id/dateRB"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/action_height"
+                            android:drawableEnd="@drawable/date_icon"
+                            android:drawablePadding="@dimen/main"
+                            android:paddingStart="@dimen/main"
+                            android:paddingEnd="@dimen/main"
+                            android:text="تاريخ فقط"
+                            android:textColor="@color/textPrimary"
+                            android:textSize="@dimen/list_text"
+                            app:buttonTint="@color/colorPrimary"
+                            tools:ignore="SpUsage" />
+
+                    </RadioGroup>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

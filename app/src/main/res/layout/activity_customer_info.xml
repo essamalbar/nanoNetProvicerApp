@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".CustomerInfoActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/widget_margin"
+        app:cardCornerRadius="@dimen/radius"
+        app:cardElevation="@dimen/card">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/action_height">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLight"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/mini">
+
+                        <ImageView
+                            android:id="@+id/backIV"
+                            style="@style/NavIcons"
+                            android:layout_gravity="center"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:src="@drawable/ic_round_arrow_back"
+                            app:tint="@color/colorPrimaryDark"
+                            tools:ignore="ContentDescription,UnusedAttribute" />
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:id="@+id/linkIV"
+                            style="@style/NavIcons"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:src="@drawable/ic_round_add_link"
+                            app:tint="@color/colorPrimaryDark"
+                            tools:ignore="ContentDescription,UnusedAttribute" />
+
+                        <ImageView
+                            android:id="@+id/noteIV"
+                            style="@style/NavIcons"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:src="@drawable/ic_round_sticky_note"
+                            app:tint="@color/colorPrimaryDark"
+                            tools:ignore="ContentDescription,UnusedAttribute" />
+
+                        <ImageView
+                            android:id="@+id/moreIV"
+                            style="@style/NavIcons"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:src="@drawable/ic_baseline_more"
+                            app:tint="@color/colorPrimaryDark"
+                            tools:ignore="ContentDescription,UnusedAttribute" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/nameTV"
+                        style="@style/AppHeadText"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="center"
+                        android:text="@string/name"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <LinearLayout
+                        style="@style/navLinearLayout"
+                        android:foreground="?attr/selectableItemBackground"
+                        tools:ignore="UnusedAttribute">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            style="@style/NavIcons"
+                            app:tint="@color/colorPrimaryDark"
+                            android:src="@drawable/ic_round_monetization_on" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/AppTextNav"
+                                android:layout_marginTop="@dimen/mini"
+                                android:layout_marginBottom="0dp"
+                                android:text="@string/current_amount"
+                                android:textSize="@dimen/main"
+                                tools:ignore="SpUsage" />
+
+                            <TextView
+                                android:id="@+id/amountTV"
+                                style="@style/AppTextNav"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="@dimen/mini"
+                                android:text="@string/amount" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <LinearLayout style="@style/navLinearLayout">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/NavIcons"
+                        android:src="@drawable/ic_baseline_bubble_chart" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="0dp"
+                            android:text="@string/user"
+                            android:textSize="@dimen/main"
+                            tools:ignore="SpUsage" />
+
+                        <TextView
+                            android:id="@+id/userTV"
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="@dimen/mini"
+                            android:gravity="right"
+                            android:text="@string/username"
+                            tools:ignore="RtlHardcoded" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+                <RelativeLayout style="@style/NavDividers" />
+
+                <LinearLayout
+                    android:id="@+id/mobileLL"
+                    style="@style/navLinearLayout"
+                    android:foreground="?attr/selectableItemBackground"
+                    tools:ignore="UnusedAttribute">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/NavIcons"
+                        android:src="@drawable/ic_round_local_phone" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="0dp"
+                            android:text="@string/mobile"
+                            android:textSize="@dimen/main"
+                            tools:ignore="SpUsage" />
+
+                        <TextView
+                            android:id="@+id/mobileTV"
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="@dimen/mini"
+                            android:text="@string/mobile" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+                <RelativeLayout style="@style/NavDividers" />
+
+                <LinearLayout style="@style/navLinearLayout">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/NavIcons"
+                        android:src="@drawable/ic_round_attach_money" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="0dp"
+                            android:text="@string/cost"
+                            android:textSize="@dimen/main"
+                            tools:ignore="SpUsage" />
+
+                        <TextView
+                            android:id="@+id/costTV"
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="@dimen/mini"
+                            android:text="@string/cost" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+                <RelativeLayout style="@style/NavDividers" />
+
+                <LinearLayout style="@style/navLinearLayout">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/NavIcons"
+                        android:src="@drawable/ic_round_today" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="0dp"
+                            android:text="@string/start_date"
+                            android:textSize="@dimen/main"
+                            tools:ignore="SpUsage" />
+
+                        <TextView
+                            android:id="@+id/startDateTV"
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="@dimen/mini"
+                            android:gravity="right"
+                            android:text="@string/start_date"
+                            tools:ignore="RtlHardcoded" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+                <RelativeLayout style="@style/NavDividers" />
+
+                <LinearLayout style="@style/navLinearLayout">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/NavIcons"
+                        android:src="@drawable/ic_round_today" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="0dp"
+                            android:text="@string/end_date"
+                            android:textSize="@dimen/main"
+                            tools:ignore="SpUsage" />
+
+                        <TextView
+                            android:id="@+id/endDateTV"
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="@dimen/mini"
+                            android:gravity="right"
+                            android:text="@string/end_date"
+                            tools:ignore="RtlHardcoded" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+                <RelativeLayout style="@style/NavDividers" />
+
+                <LinearLayout style="@style/navLinearLayout">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        style="@style/NavIcons"
+                        android:src="@drawable/ic_round_hourglass_top" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="0dp"
+                            android:text="@string/remain"
+                            android:textSize="@dimen/main"
+                            tools:ignore="SpUsage" />
+
+                        <TextView
+                            android:id="@+id/daysTV"
+                            style="@style/AppTextNav"
+                            android:layout_marginTop="@dimen/mini"
+                            android:layout_marginBottom="@dimen/mini"
+                            android:text="@string/days_remain" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/customerBNV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_height"
+            android:layout_gravity="bottom"
+            app:backgroundTint="@color/colorLight"
+            app:itemIconTint="@color/colorPrimaryDark"
+            app:itemTextColor="@color/colorPrimaryDark"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/customer_item_nav_menu" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

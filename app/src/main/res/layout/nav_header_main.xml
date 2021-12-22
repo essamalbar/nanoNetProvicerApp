@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nameTV"
+            style="@style/AppHeadText"
+            android:layout_height="@dimen/mini_logo"
+            android:gravity="center"
+            android:text="@string/name"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/totalCustomersTV"
+            style="@style/AppListText"
+            android:layout_marginStart="@dimen/main"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="@dimen/main"
+            android:layout_marginBottom="0dp"
+            android:textColor="@android:color/white"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/totalAmountTV"
+            style="@style/AppListText"
+            android:layout_marginStart="@dimen/main"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="@dimen/main"
+            android:textColor="@android:color/white"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/statusActionLL"
+        style="@style/navLinearLayout"
+        android:layout_marginBottom="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/NavIcons"
+            android:src="@drawable/ic_round_people" />
+
+        <TextView
+            style="@style/AppTextNav"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/customers_status" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/NavIcons"
+            android:src="@drawable/ic_round_arrow_drop_down" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/statusLL"
+        style="@style/navLinearLayout"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:id="@+id/activeTV"
+            style="@style/NavCount"
+            app:backgroundTint="@color/colorGreen" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/warningTV"
+            style="@style/NavCount"
+            app:backgroundTint="@color/colorYellow" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/expireTV"
+            style="@style/NavCount"
+            app:backgroundTint="@color/colorRed" />
+
+    </LinearLayout>
+
+    <RelativeLayout style="@style/NavDividers" />
+
+    <LinearLayout
+        android:id="@+id/orderActionLL"
+        style="@style/navLinearLayout"
+        android:layout_marginBottom="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/NavIcons"
+            android:src="@drawable/ic_round_filter_list" />
+
+        <TextView
+            style="@style/AppTextNav"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/order_by" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/NavIcons"
+            android:src="@drawable/ic_round_arrow_drop_down" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/orderRG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main"
+        android:layout_marginEnd="@dimen/main"
+        android:layout_marginBottom="@dimen/main"
+        android:checkedButton="@id/nameRB"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/nameRB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/by_name"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/list_text"
+            app:buttonTint="@color/colorPrimary"
+            tools:ignore="SpUsage" />
+
+        <RadioButton
+            android:id="@+id/daysRB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/by_days"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/list_text"
+            app:buttonTint="@color/colorPrimary"
+            tools:ignore="SpUsage" />
+
+        <RadioButton
+            android:id="@+id/amountRB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/by_amount"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/list_text"
+            app:buttonTint="@color/colorPrimary"
+            tools:ignore="SpUsage" />
+
+    </RadioGroup>
+
+    <RelativeLayout style="@style/NavDividers" />
+
+    <LinearLayout
+        android:id="@+id/alertsSettingsLL"
+        style="@style/navLinearLayout"
+        android:foreground="?attr/selectableItemBackground"
+        tools:ignore="UnusedAttribute">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/NavIcons"
+            android:src="@drawable/ic_round_notifications_active" />
+
+        <TextView
+            style="@style/AppTextNav"
+            android:text="@string/alerts_settings" />
+
+    </LinearLayout>
+
+    <RelativeLayout style="@style/NavDividers" />
+
+    <LinearLayout
+        android:id="@+id/alertsLL"
+        style="@style/navLinearLayout"
+        android:foreground="?attr/selectableItemBackground"
+        tools:ignore="UnusedAttribute">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/NavIcons"
+            android:src="@drawable/ic_round_send" />
+
+        <TextView
+            style="@style/AppTextNav"
+            android:text="@string/alerts" />
+
+    </LinearLayout>
+
+    <RelativeLayout style="@style/NavDividers" />
+
+    <LinearLayout
+        android:id="@+id/settingsLL"
+        style="@style/navLinearLayout"
+        android:foreground="?attr/selectableItemBackground"
+        tools:ignore="UnusedAttribute">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/NavIcons"
+            android:src="@drawable/ic_round_settings" />
+
+        <TextView
+            style="@style/AppTextNav"
+            android:text="@string/action_settings" />
+
+    </LinearLayout>
+
+    <RelativeLayout style="@style/NavDividers" />
+
+    <LinearLayout
+        android:id="@+id/logoutLL"
+        style="@style/navLinearLayout"
+        android:foreground="?attr/selectableItemBackground"
+        tools:ignore="UnusedAttribute">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            style="@style/NavIcons"
+            android:src="@drawable/ic_round_exit_to_app" />
+
+        <TextView
+            style="@style/AppTextNav"
+            android:text="@string/logout" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

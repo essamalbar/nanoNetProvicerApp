@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="vertical"
+        tools:ignore="UnusedAttribute">
+
+        <TextView
+            android:id="@+id/dateTimeIV"
+            style="@style/AppTexts"
+            android:layout_width="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/main"
+            android:layout_marginTop="@dimen/mini"
+            android:layout_marginEnd="@dimen/main"
+            android:layout_marginBottom="0dp"
+            android:text="2021-07-06 12:00" />
+
+        <TextView
+            android:id="@+id/bodyTV"
+            style="@style/AppListText"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="@dimen/mini"
+            android:text="@string/app_name"
+            android:textColor="@color/textPrimary"
+            android:textSize="18dp"
+            android:textStyle="normal" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

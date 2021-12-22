@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/main_margin"
+        app:cardCornerRadius="@dimen/radius"
+        app:cardElevation="@dimen/card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/planTV"
+                style="@style/AppListText"
+                android:layout_marginBottom="0dp"
+                android:text="@string/app_name"
+                android:textSize="@dimen/title"
+                android:textStyle="normal"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+            <TextView
+                android:id="@+id/planPriceTV"
+                style="@style/AppListText"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="@dimen/mini"
+                android:text="@string/app_name"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/title"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+            <RelativeLayout style="@style/NavDividers" />
+
+            <TextView
+                android:id="@+id/planDescriptionTV"
+                style="@style/AppText"
+                android:layout_marginStart="@dimen/main"
+                android:layout_marginTop="@dimen/mini"
+                android:layout_marginEnd="@dimen/main"
+                android:gravity="start"
+                android:text="@string/app_name"
+                android:textStyle="normal"
+                tools:ignore="RtlHardcoded,SpUsage" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
